@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ilm-8g-fGn">
+                                <rect key="frame" x="105.66666666666669" y="255" width="203" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ilm-8g-fGn" secondAttribute="height" multiplier="44:49" id="b2I-Sr-053"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzx-YS-ben">
+                                <rect key="frame" x="108.66666666666669" y="663" width="197" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="EQU-oU-1ZG"/>
+                                    <constraint firstAttribute="width" constant="197" id="eVh-H0-Rm2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.75472134349999997" green="0.8632921576" blue="0.90607434509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Ilm-8g-fGn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PK1-vo-S50"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fzx-YS-ben" secondAttribute="bottom" constant="20" id="Tji-QL-spk"/>
+                            <constraint firstItem="Ilm-8g-fGn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="dlA-Wz-Ebd"/>
+                            <constraint firstItem="fzx-YS-ben" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xnN-EM-xCE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="374.18478260869568"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon" width="203.33332824707031" height="203.33332824707031"/>
+        <image name="Instagrid" width="366.33334350585938" height="115.66666412353516"/>
+    </resources>
+</document>

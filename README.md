@@ -1,2 +1,0 @@
-# Instagrid
-Photo App
