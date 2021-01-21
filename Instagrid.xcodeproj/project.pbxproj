@@ -21,7 +21,6 @@
 		1E39C87B259B5CC70011E830 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C87A259B5CC70011E830 /* Delm-Medium.otf */; };
 		1E39C87C259B5CC70011E830 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C87A259B5CC70011E830 /* Delm-Medium.otf */; };
 		1E39C87D259B5CC70011E830 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C87A259B5CC70011E830 /* Delm-Medium.otf */; };
-		1E95CE7A25AC8609008895A1 /* ActiveGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95CE7925AC8609008895A1 /* ActiveGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,6 @@
 		1E39C860259B5AB50011E830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E39C870259B5CB80011E830 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		1E39C87A259B5CC70011E830 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
-		1E95CE7925AC8609008895A1 /* ActiveGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				1E39C842259B5AB30011E830 /* Main.storyboard */,
-				1E95CE7925AC8609008895A1 /* ActiveGrid.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,7 +307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E39C841259B5AB30011E830 /* ViewController.swift in Sources */,
-				1E95CE7A25AC8609008895A1 /* ActiveGrid.swift in Sources */,
 				1E39C83D259B5AB30011E830 /* AppDelegate.swift in Sources */,
 				1E39C83F259B5AB30011E830 /* SceneDelegate.swift in Sources */,
 			);
@@ -488,7 +484,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -497,6 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.atalantes-hh.Instagrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -507,7 +505,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -516,6 +515,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.atalantes-hh.Instagrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
