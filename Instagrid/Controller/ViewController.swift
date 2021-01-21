@@ -160,6 +160,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             swipeGesture.direction = .left
         } else {
             swipeLabel.text = "Swipe up to share"
+            arrow.image = UIImage(named: "Arrow Up")
             swipeGesture.direction = .up
         }
     }
@@ -248,14 +249,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if UIDevice.current.orientation == .landscapeRight || UIDevice.current.orientation == .landscapeLeft {
             let swipeLeftAnimation = CGAffineTransform(translationX: -self.view.frame.width , y: 0)
             UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
-                self.gridView.transform = minusGrid.concatenating(swipeLeftAnimation)
+                self.gridPicture.transform = minusGrid.concatenating(swipeLeftAnimation)
             })
             arrow.isHidden = true
             swipeLabel.isHidden = true
         } else {
             let swipeUpAnimation = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
             UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
-                self.gridView.transform = minusGrid.concatenating(swipeUpAnimation)
+                self.gridPicture.transform = minusGrid.concatenating(swipeUpAnimation)
             })
             arrow.isHidden = true
             swipeLabel.isHidden = true
@@ -268,7 +269,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         arrow.isHidden = false
         swipeLabel.isHidden = false
         UIView.animate(withDuration: 0.4, delay: 0, animations: {
-            self.gridView.transform = .identity
+            self.gridPicture.transform = .identity
         })
         
     }
