@@ -8,17 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+
+    // MARK: - Enumerations
+
+    // Enumeration for the layout Display buttons
+    enum Display {
+        case layoutT, layoutReverseT, fourSquare
+    }
+
+    // Enumeration for CurrentView
+    enum CurrentView {
+        case topLeftView, topRightView, bottomLeftView, bottomRightView
+    }
+    var isView: CurrentView = .bottomLeftView
+
     // MARK: - @IBOutlet
-    
-    // Variables Buttons for Layout
-    
+
+    //  Buttons for layout
     @IBOutlet weak var layout1: UIButton!
     @IBOutlet weak var layout2: UIButton!
     @IBOutlet weak var layout3: UIButton!
-    
-    // Variables for Grid Views
-    
+
+    // All views & Buttons for Grid and Subviews
     @IBOutlet weak var gridView: UIStackView!
     @IBOutlet weak var gridPicture: UIView!
     @IBOutlet weak var topView: UIStackView!
@@ -27,49 +38,86 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topRightView: UIButton!
     @IBOutlet weak var bottomLeftView: UIButton!
     @IBOutlet weak var bottomRightView: UIButton!
-    
-    // Variables for Share Displat
-    
+
+    // Share Display : Label & Arrow
     @IBOutlet weak var swipeLabel: UILabel!
     @IBOutlet weak var arrow: UIImageView!
-    
-    // MARK: - Private Var for Gesture
-    
+
+    // MARK: - Private var
+
     private var swipeGesture: UISwipeGestureRecognizer!
-    
-    // MARK: - FirstView
-    
-    // Do any additional setup after loading the view.
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        viewRadius()
-        activeDisplay = .layoutReverseT
-        swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe(_:)))
-        gridPicture.addGestureRecognizer(swipeGesture)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(disposition), name: UIDevice.orientationDidChangeNotification, object: nil)
-        
-    }
-    
-    // MARK: - Layout Views
-    
-    // Enumeration Layout Buttons
-    
-    enum Display {
-        case layoutT, layoutReverseT, fourSquare
-    }
-    
-    // Display Default Layout
-    
+
+    // Display Layout Default
     var activeDisplay: Display = .layoutReverseT {
         didSet {
             currentLayout(activeDisplay)
         }
     }
-    
+
+    // MARK: - FirstView when application lauch
+
+    // viewDidLoad : Do any additional setup after loading the view.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewRadius()
+        activeDisplay = .layoutReverseT
+
+        //Active gesture options
+        swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe(_:)))
+        gridPicture.addGestureRecognizer(swipeGesture)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(disposition),
+                                               name: UIDevice.orientationDidChangeNotification,
+                                               object: nil)
+    }
+
+    // MARK: - @IBAction
+
+    // @IBAction Buttons for selected Layout
+    @IBAction func selectedLayout1(_ sender: Any) {
+        activeDisplay = .layoutT
+    }
+
+    @IBAction func selectedLayout2(_ sender: Any) {
+        activeDisplay = .layoutReverseT
+    }
+
+    @IBAction func selectedLayout3(_ sender: Any) {
+        activeDisplay = .fourSquare
+    }
+
+    // @IBAction to Add pictures to each view
+    @IBAction func newPictureTopLeft() {
+        loadPicture()
+        isView = .topLeftView
+    }
+
+    @IBAction func newPictureTopRight() {
+        loadPicture()
+        isView = .topRightView
+    }
+
+    @IBAction func newPictureBottomLeft() {
+        loadPicture()
+        isView = .bottomLeftView
+    }
+
+    @IBAction func newPictureBottomRight() {
+        loadPicture()
+        isView = .bottomRightView
+    }
+
+    // MARK: Private Methods
+
+    // Radius correction to all views
+    private func viewRadius() {
+        topLeftView.layer.cornerRadius = 2
+        topRightView.layer.cornerRadius = 2
+        bottomLeftView.layer.cornerRadius = 2
+        bottomRightView.layer.cornerRadius = 2
+    }
+
     // Display Layout Selection and Apply to Grid
-    
     private func currentLayout(_ layoutDisplay: Display) {
         switch layoutDisplay {
         case .layoutT:
@@ -80,7 +128,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             topLeftView.isHidden = false
             bottomRightView.isHidden = false
             bottomLeftView.isHidden = false
-            
         case .layoutReverseT:
             layout2.setImage(UIImage(named: "Selected"), for: .normal)
             layout1.imageView?.isHidden = true
@@ -89,7 +136,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             topRightView.isHidden = false
             topLeftView.isHidden = false
             bottomLeftView.isHidden = false
-            
         case .fourSquare:
             layout3.setImage(UIImage(named: "Selected"), for: .normal)
             layout1.imageView?.isHidden = true
@@ -100,60 +146,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             bottomLeftView.isHidden = false
         }
     }
-    
-    
-    // Radius correction to all views
-    
-    func viewRadius() {
-        topLeftView.layer.cornerRadius = 2
-        topRightView.layer.cornerRadius = 2
-        bottomLeftView.layer.cornerRadius = 2
-        bottomRightView.layer.cornerRadius = 2
-    }
-    
-    // MARK: - @IBAction
-    
-    // @IBAction Button for selected Layout
-    
-    @IBAction func SelectedLayout1(_ sender: Any) {
-        activeDisplay = .layoutT
-    }
-    
-    @IBAction func SelectedLayout2(_ sender: Any) {
-        activeDisplay = .layoutReverseT
-    }
-    
-    @IBAction func SelectedLayout3(_ sender: Any) {
-        activeDisplay = .fourSquare
-    }
-    
-    
-    // @IBAction to Add pictures to each place
-    
-    @IBAction func newPictureTopLeft() {
-        loadPicture()
-        isView = .topLeftView
-    }
-    
-    @IBAction func newPictureTopRight() {
-        loadPicture()
-        isView = .topRightView
-    }
-    
-    @IBAction func newPictureBottomLeft() {
-        loadPicture()
-        isView = .bottomLeftView
-    }
-    
-    @IBAction func newPictureBottomRight() {
-        loadPicture()
-        isView = .bottomRightView
-    }
-    
-    // MARK: - Sharing
-    
+
     // Define Orientation of device
-    @objc func disposition() {
+    @objc private func disposition() {
         if UIDevice.current.orientation == .landscapeRight || UIDevice.current.orientation == .landscapeLeft {
             swipeLabel.text = "Swipe left to share"
             arrow.image = UIImage(named: "Arrow Left")
@@ -164,90 +159,105 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             swipeGesture.direction = .up
         }
     }
-    
-    // swipe when action recognized
-    
-    @objc func doSwipe(_ sender: UISwipeGestureRecognizer) {
+
+    // Swipe when action recognized & Add Methods to checkEmptyPicture
+    @objc private func didSwipe(_ sender: UISwipeGestureRecognizer) {
+        guard checkPicture() else { return}
         gridAnimation()
         if sender.state == .recognized {
             share()
         }
     }
-    
-    // Func Pickup image in Library
-    
-    func loadPicture() {
+
+    // Access and choose image in Photo Library
+    private func loadPicture() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePickerController = UIImagePickerController()
-            imagePickerController.delegate = self;
+            imagePickerController.delegate = self
             imagePickerController.sourceType = .photoLibrary
             self.present(imagePickerController, animated: true, completion: nil)
         }
     }
     
-    //enum view
-    
-    enum CurrentView {
-        case topLeftView, topRightView, bottomLeftView, bottomRightView
-    }
-    var isView : CurrentView = .bottomLeftView
-    
-    // func add image to active view
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let newPicture = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        switch isView {
-        case .topLeftView:
-            topLeftView.setImage(newPicture, for: .normal)
-            topLeftView.imageView?.layer.cornerRadius = 2
-            
-        case .topRightView:
-            topRightView.setImage(newPicture, for: .normal)
-            topRightView.imageView?.layer.cornerRadius = 2
-            
-        case .bottomLeftView :
-            bottomLeftView.setImage(newPicture, for: .normal)
-            bottomLeftView.imageView?.layer.cornerRadius = 2
-            
-        case .bottomRightView :
-            bottomRightView.setImage(newPicture, for: .normal)
-            bottomRightView.imageView?.layer.cornerRadius = 2
-            
-        }
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     // Conversion UIView to UIImage
-    
-    func gridImage(with view: UIView) -> UIImage {
+    private func gridImage(with view: UIView) -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
         let image = renderer.image { _ in
             view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         }
         return image
     }
-    
-    // Func to Share picture after Conversion
-    
+
+    // Share picture after Conversion with gridImage
     private func share() {
         let imageToShare = gridImage(with: gridPicture)
         let activityViewController = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true, completion: nil)
-        activityViewController.completionWithItemsHandler = {(activityViewController, completed, returnedItem, error) in
+        activityViewController.completionWithItemsHandler = {(_, _, _, _) in
             self.reverseGridAnimation()
         }
-        
+
     }
     
-    // MARK: - Animation
+    // func alertmessage
+    private func showAlertPopUp() {
+        // create the alert
+        let alert = UIAlertController(title: "Warning Empty : Image",
+                                      message: "You need to complete the grid before sharing",
+                                      preferredStyle: .alert)
+        // add an action
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
     
-    // func animation when Share
-    func gridAnimation() {
+    // Image Completion Checking if view is Hidden ignore PopUp Alert
+    private func checkPicture() -> Bool {
+        // checking image data if pngData is not equal to Plus image the function is ignore
+        guard let plusImage = UIImage(named: "Plus")?.pngData() else { return false }
+        if let image = topLeftView.image(for: .normal)?.pngData(), plusImage == image {
+            if topLeftView.isHidden == true {
+                return true
+            } else {
+                showAlertPopUp()
+                return false
+            }
+        }
+        if let image = topRightView.image(for: .normal)?.pngData(), plusImage == image {
+            if topRightView.isHidden == true {
+                return true
+            } else {
+                showAlertPopUp()
+                return false
+            }
+        }
+        if let image = bottomLeftView.image(for: .normal)?.pngData(), plusImage == image {
+            if bottomLeftView.isHidden == true {
+                return true
+            } else {
+                showAlertPopUp()
+                return false
+            }
+        }
+        if let image = bottomRightView.image(for: .normal)?.pngData(), plusImage == image {
+            if bottomRightView.isHidden == true {
+                return true
+            } else {
+                showAlertPopUp()
+                return false
+            }
+        }
+        return true
+    }
+    
+    // Lauch animation when Share to each mode of orientation
+    private func gridAnimation() {
+        // Reduction of the grid
         let minusGrid = CGAffineTransform(scaleX: 0.4, y: 0.4)
-        
         if UIDevice.current.orientation == .landscapeRight || UIDevice.current.orientation == .landscapeLeft {
-            let swipeLeftAnimation = CGAffineTransform(translationX: -self.view.frame.width , y: 0)
+            // Combine minusGrid and swipe translation
+            let swipeLeftAnimation = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
             UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
                 self.gridPicture.transform = minusGrid.concatenating(swipeLeftAnimation)
             })
@@ -262,34 +272,40 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             swipeLabel.isHidden = true
         }
     }
-    
-    // func animation when End Share
-    
-    func reverseGridAnimation() {
+
+    //  Reverse Animation when end Share
+    private func reverseGridAnimation() {
         arrow.isHidden = false
         swipeLabel.isHidden = false
         UIView.animate(withDuration: 0.4, delay: 0, animations: {
             self.gridPicture.transform = .identity
         })
-        
     }
-    
-    // MARK: - Bonus
-    
-    // func alertmessage
-    func showAlertPopup() {
-        // create the alert
-        let alert = UIAlertController(title: "Empty Image", message: "You need to complete the Grid", preferredStyle: .alert)
-        
-        // add an action
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    // si pas d'image
-    func checkPicture() {
+
+    // MARK: - Internal Methods
+
+    // Picking image with loadPicture and apply to choosen view
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any] ) {
+        let newPicture = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        switch isView {
+        case .topLeftView:
+            topLeftView.setImage(newPicture, for: .normal)
+            topLeftView.imageView?.contentMode = .scaleAspectFill
+            topLeftView.imageView?.layer.cornerRadius = 2
+        case .topRightView:
+            topRightView.setImage(newPicture, for: .normal)
+            topRightView.imageView?.contentMode = .scaleAspectFill
+            topRightView.imageView?.layer.cornerRadius = 2
+        case .bottomLeftView :
+            bottomLeftView.setImage(newPicture, for: .normal)
+            bottomLeftView.imageView?.contentMode = .scaleAspectFill
+            bottomLeftView.imageView?.layer.cornerRadius = 2
+        case .bottomRightView :
+            bottomRightView.setImage(newPicture, for: .normal)
+            bottomRightView.imageView?.contentMode = .scaleAspectFill
+            bottomRightView.imageView?.layer.cornerRadius = 2
+        }
+        self.dismiss(animated: true, completion: nil)
     }
 }
-
