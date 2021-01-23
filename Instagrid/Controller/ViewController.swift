@@ -203,7 +203,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // func alertmessage
     private func showAlertPopUp() {
         // create the alert
-        let alert = UIAlertController(title: "Warning Empty : Image",
+        let alert = UIAlertController(title: "Warning : Empty Image",
                                       message: "You need to complete the grid before sharing",
                                       preferredStyle: .alert)
         // add an action
