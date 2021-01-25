@@ -17,6 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ilm-8g-fGn">
+<<<<<<< HEAD
+                                <rect key="frame" x="162" y="323" width="90" height="90"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzx-YS-ben">
+                                <rect key="frame" x="11" y="660" width="392" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="sWS-WD-JVa"/>
+=======
                                 <rect key="frame" x="105.33333333333331" y="244" width="203.33333333333337" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ilm-8g-fGn" secondAttribute="height" multiplier="32:39" id="b2I-Sr-053"/>
@@ -27,15 +35,18 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="EQU-oU-1ZG"/>
                                     <constraint firstAttribute="width" secondItem="fzx-YS-ben" secondAttribute="height" multiplier="151:53" id="IsZ-6p-H2o"/>
+>>>>>>> master
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.75472134349999997" green="0.8632921576" blue="0.90607434509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="fzx-YS-ben" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="6YR-eX-rZN"/>
                             <constraint firstItem="Ilm-8g-fGn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PK1-vo-S50"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fzx-YS-ben" secondAttribute="bottom" constant="30" id="Tji-QL-spk"/>
                             <constraint firstItem="Ilm-8g-fGn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="dlA-Wz-Ebd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fzx-YS-ben" secondAttribute="trailing" constant="11" id="sBW-jC-2Rn"/>
                             <constraint firstItem="fzx-YS-ben" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xnN-EM-xCE"/>
                         </constraints>
                     </view>
@@ -46,7 +57,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon" width="203.33332824707031" height="203.33332824707031"/>
-        <image name="Instagrid" width="366.33334350585938" height="115.66666412353516"/>
+        <image name="Icon" width="90" height="90"/>
+        <image name="Instagrid" width="82" height="26"/>
     </resources>
 </document>
