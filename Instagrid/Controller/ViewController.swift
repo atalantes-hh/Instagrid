@@ -197,7 +197,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         activityViewController.completionWithItemsHandler = {(_, _, _, _) in
             self.reverseGridAnimation()
         }
-
     }
     
     // func alertmessage
@@ -275,11 +274,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     //  Reverse Animation when end Share
     private func reverseGridAnimation() {
-        arrow.isHidden = false
-        swipeLabel.isHidden = false
-        UIView.animate(withDuration: 0.4, delay: 0, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, animations: {
             self.gridPicture.transform = .identity
         })
+        arrow.isHidden = false
+        swipeLabel.isHidden = false
     }
 
     // MARK: - Internal Methods
