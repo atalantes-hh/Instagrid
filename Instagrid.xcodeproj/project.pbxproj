@@ -108,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				1E39C86F259B5C960011E830 /* Supporting Files */,
-				1E6CA95825A76DB600B0EC04 /* Model */,
 				1E6CA95A25A76DCA00B0EC04 /* View */,
 				1E6CA95925A76DBD00B0EC04 /* Controller */,
 			);
@@ -145,13 +144,6 @@
 				1E39C870259B5CB80011E830 /* ThirstySoftRegular.otf */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1E6CA95825A76DB600B0EC04 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1E6CA95925A76DBD00B0EC04 /* Controller */ = {

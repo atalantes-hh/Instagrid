@@ -8,60 +8,60 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     // MARK: - Enumerations
-
+    
     // Enumeration for the layout Display buttons
     enum Display {
         case layoutT, layoutReverseT, fourSquare
     }
-
+    
     // Enumeration for CurrentView
     enum CurrentView {
         case topLeftView, topRightView, bottomLeftView, bottomRightView
     }
     var isView: CurrentView = .bottomLeftView
-
+    
     // MARK: - @IBOutlet
-
+    
     //  Buttons for layout
     @IBOutlet weak var layout1: UIButton!
     @IBOutlet weak var layout2: UIButton!
     @IBOutlet weak var layout3: UIButton!
-
+    
     // All views & Buttons for Grid and Subviews
-    @IBOutlet weak var gridView: UIStackView!
     @IBOutlet weak var gridPicture: UIView!
-    @IBOutlet weak var topView: UIStackView!
-    @IBOutlet weak var bottomView: UIStackView!
     @IBOutlet weak var topLeftView: UIButton!
     @IBOutlet weak var topRightView: UIButton!
     @IBOutlet weak var bottomLeftView: UIButton!
     @IBOutlet weak var bottomRightView: UIButton!
-
+    
+    // Share Display : Label & Arrow
+    @IBOutlet weak var instagridLabel: UILabel!
+    
     // Share Display : Label & Arrow
     @IBOutlet weak var swipeLabel: UILabel!
     @IBOutlet weak var arrow: UIImageView!
-
+    
     // MARK: - Private var
-
+    
     private var swipeGesture: UISwipeGestureRecognizer!
-
+    
     // Display Layout Default
     var activeDisplay: Display = .layoutReverseT {
         didSet {
             currentLayout(activeDisplay)
         }
     }
-
+    
     // MARK: - FirstView when application lauch
-
+    
     // viewDidLoad : Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
         viewRadius()
         activeDisplay = .layoutReverseT
-
+        
         //Active gesture options
         swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe(_:)))
         gridPicture.addGestureRecognizer(swipeGesture)
@@ -70,45 +70,45 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                                                name: UIDevice.orientationDidChangeNotification,
                                                object: nil)
     }
-
+    
     // MARK: - @IBAction
-
+    
     // @IBAction Buttons for selected Layout
     @IBAction func selectedLayout1(_ sender: Any) {
         activeDisplay = .layoutT
     }
-
+    
     @IBAction func selectedLayout2(_ sender: Any) {
         activeDisplay = .layoutReverseT
     }
-
+    
     @IBAction func selectedLayout3(_ sender: Any) {
         activeDisplay = .fourSquare
     }
-
+    
     // @IBAction to Add pictures to each view
     @IBAction func newPictureTopLeft() {
         loadPicture()
         isView = .topLeftView
     }
-
+    
     @IBAction func newPictureTopRight() {
         loadPicture()
         isView = .topRightView
     }
-
+    
     @IBAction func newPictureBottomLeft() {
         loadPicture()
         isView = .bottomLeftView
     }
-
+    
     @IBAction func newPictureBottomRight() {
         loadPicture()
         isView = .bottomRightView
     }
-
+    
     // MARK: Private Methods
-
+    
     // Radius correction to all views
     private func viewRadius() {
         topLeftView.layer.cornerRadius = 2
@@ -116,42 +116,43 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomLeftView.layer.cornerRadius = 2
         bottomRightView.layer.cornerRadius = 2
     }
-
+    
     // Display Layout Selection and Apply to Grid
     private func currentLayout(_ layoutDisplay: Display) {
         switch layoutDisplay {
         case .layoutT:
             layout1.setImage(UIImage(named: "Selected"), for: .normal)
-            layout2.imageView?.isHidden = true
-            layout3.imageView?.isHidden = true
+            layout2.setImage(nil, for: .normal)
+            layout3.setImage(nil, for: .normal)
             topRightView.isHidden = true
             topLeftView.isHidden = false
             bottomRightView.isHidden = false
             bottomLeftView.isHidden = false
         case .layoutReverseT:
             layout2.setImage(UIImage(named: "Selected"), for: .normal)
-            layout1.imageView?.isHidden = true
-            layout3.imageView?.isHidden = true
+            layout1.setImage(nil, for: .normal)
+            layout3.setImage(nil, for: .normal)
             bottomRightView.isHidden = true
             topRightView.isHidden = false
             topLeftView.isHidden = false
             bottomLeftView.isHidden = false
         case .fourSquare:
             layout3.setImage(UIImage(named: "Selected"), for: .normal)
-            layout1.imageView?.isHidden = true
-            layout2.imageView?.isHidden = true
+            layout1.setImage(nil, for: .normal)
+            layout2.setImage(nil, for: .normal)
             topRightView.isHidden = false
             topLeftView.isHidden = false
             bottomRightView.isHidden = false
             bottomLeftView.isHidden = false
         }
     }
-
+    
     // Define Orientation of device
     @objc private func disposition() {
         if UIDevice.current.orientation == .landscapeRight || UIDevice.current.orientation == .landscapeLeft {
             if (traitCollection.verticalSizeClass == .compact) && (traitCollection.horizontalSizeClass == .compact) {
                 swipeLabel.font = swipeLabel.font.withSize(22)
+                instagridLabel.font = instagridLabel.font.withSize(30)
             } else {
                 swipeLabel.font = swipeLabel.font.withSize(28)     
             }
@@ -164,7 +165,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             swipeGesture.direction = .up
         }
     }
-
+    
     // Swipe when action recognized & Add Methods to checkEmptyPicture
     @objc private func didSwipe(_ sender: UISwipeGestureRecognizer) {
         guard checkPicture() else { return}
@@ -173,7 +174,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             share()
         }
     }
-
+    
     // Access and choose image in Photo Library
     private func loadPicture() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -192,7 +193,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         return image
     }
-
+    
     // Share picture after Conversion with gridImage
     private func share() {
         let imageToShare = gridImage(with: gridPicture)
@@ -261,7 +262,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             swipeLabel.isHidden = true
         }
     }
-
+    
     //  Reverse Animation when end Share
     private func reverseGridAnimation() {
         UIView.animate(withDuration: 0.3, delay: 0, animations: {
@@ -270,9 +271,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         arrow.isHidden = false
         swipeLabel.isHidden = false
     }
-
+    
     // MARK: - Internal Methods
-
+    
     // Picking image with loadPicture and apply to choosen view
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any] ) {
