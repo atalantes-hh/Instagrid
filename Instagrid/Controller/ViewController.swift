@@ -150,6 +150,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Define Orientation of device
     @objc private func disposition() {
         if UIDevice.current.orientation == .landscapeRight || UIDevice.current.orientation == .landscapeLeft {
+            if (traitCollection.verticalSizeClass == .compact) && (traitCollection.horizontalSizeClass == .compact) {
+                swipeLabel.font = swipeLabel.font.withSize(22)
+            } else {
+                swipeLabel.font = swipeLabel.font.withSize(28)     
+            }
             swipeLabel.text = "Swipe left to share"
             arrow.image = UIImage(named: "Arrow Left")
             swipeGesture.direction = .left
@@ -215,37 +220,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     private func checkPicture() -> Bool {
         // checking image data if pngData is not equal to Plus image the function is ignore
         guard let plusImage = UIImage(named: "Plus")?.pngData() else { return false }
-        if let image = topLeftView.image(for: .normal)?.pngData(), plusImage == image {
-            if topLeftView.isHidden == true {
-                return true
-            } else {
-                showAlertPopUp()
-                return false
-            }
+        
+        if topLeftView.isHidden == false, topLeftView.image(for: .normal)?.pngData() == plusImage {
+            showAlertPopUp()
+            return false
         }
-        if let image = topRightView.image(for: .normal)?.pngData(), plusImage == image {
-            if topRightView.isHidden == true {
-                return true
-            } else {
-                showAlertPopUp()
-                return false
-            }
+        if topRightView.isHidden == false, topRightView.image(for: .normal)?.pngData() == plusImage {
+            showAlertPopUp()
+            return false
         }
-        if let image = bottomLeftView.image(for: .normal)?.pngData(), plusImage == image {
-            if bottomLeftView.isHidden == true {
-                return true
-            } else {
-                showAlertPopUp()
-                return false
-            }
+        if bottomLeftView.isHidden == false, bottomLeftView.image(for: .normal)?.pngData() == plusImage {
+            showAlertPopUp()
+            return false
         }
-        if let image = bottomRightView.image(for: .normal)?.pngData(), plusImage == image {
-            if bottomRightView.isHidden == true {
-                return true
-            } else {
-                showAlertPopUp()
-                return false
-            }
+        if bottomRightView.isHidden == false, bottomRightView.image(for: .normal)?.pngData() == plusImage {
+            showAlertPopUp()
+            return false
         }
         return true
     }

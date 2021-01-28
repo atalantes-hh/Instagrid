@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -18,17 +18,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-cH-Dro">
-                                <rect key="frame" x="15" y="54" width="384" height="42.666666666666657"/>
+                                <rect key="frame" x="15" y="10" width="384" height="38.666666666666664"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="33"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abb-tk-cHf">
-                                <rect key="frame" x="41" y="282" width="332" height="332"/>
+                                <rect key="frame" x="41" y="202" width="332" height="332"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cA0-wP-6m6">
                                         <rect key="frame" x="16" y="16" width="300" height="300"/>
@@ -36,7 +36,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-FC-So2">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="142"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgP-fy-08z">
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgP-fy-08z">
                                                         <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
                                                         <color key="backgroundColor" red="0.94900184870000004" green="0.94900757069999997" blue="0.94902199509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" image="Plus"/>
@@ -91,8 +91,8 @@
                                     <constraint firstAttribute="trailing" secondItem="cA0-wP-6m6" secondAttribute="trailing" constant="16" id="hVZ-Y8-WNL"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="chB-DA-3Nb" userLabel="All Layouts">
-                                <rect key="frame" x="41.666666666666657" y="733.66666666666663" width="331" height="98.333333333333371"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="chB-DA-3Nb" userLabel="All Layouts">
+                                <rect key="frame" x="41.666666666666657" y="607.66666666666663" width="331" height="98.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3m-X4-B9A">
                                         <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="98.333333333333329"/>
@@ -128,7 +128,7 @@
                                 <variation key="heightClass=compact" axis="vertical" spacing="28"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85Z-kR-l2Q">
-                                <rect key="frame" x="20" y="239.66666666666666" width="374" height="32.333333333333343"/>
+                                <rect key="frame" x="20" y="158" width="374" height="34"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Swipe up to share">
                                         <attributes>
@@ -141,7 +141,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-nm-kTf">
-                                <rect key="frame" x="198.66666666666666" y="221.66666666666666" width="16.666666666666657" height="12"/>
+                                <rect key="frame" x="198.66666666666666" y="140" width="16.666666666666657" height="12"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -195,8 +195,6 @@
                                 <exclude reference="SPq-Fc-Cp1"/>
                                 <exclude reference="cpR-dH-bHJ"/>
                                 <exclude reference="RMx-Lg-fpq"/>
-                                <exclude reference="Avq-O2-Zb6"/>
-                                <exclude reference="eiO-Wp-xxf"/>
                                 <exclude reference="hfX-dr-ETj"/>
                                 <exclude reference="jPu-Wa-PZC"/>
                                 <exclude reference="0x5-5M-9ez"/>
@@ -204,6 +202,8 @@
                                 <exclude reference="Trr-zs-9DY"/>
                                 <exclude reference="Ykx-wo-D9O"/>
                                 <exclude reference="a8z-AV-3Zx"/>
+                                <exclude reference="Avq-O2-Zb6"/>
+                                <exclude reference="eiO-Wp-xxf"/>
                                 <exclude reference="MZK-rj-q49"/>
                             </mask>
                         </variation>
@@ -215,9 +215,6 @@
                                 <exclude reference="Kar-Rg-ryT"/>
                                 <include reference="L4W-HZ-yvc"/>
                                 <include reference="SPq-Fc-Cp1"/>
-                                <include reference="Avq-O2-Zb6"/>
-                                <exclude reference="KcK-vn-fXm"/>
-                                <include reference="eiO-Wp-xxf"/>
                                 <exclude reference="KLK-2c-0Aa"/>
                                 <exclude reference="f9u-Jo-3Gb"/>
                                 <include reference="hfX-dr-ETj"/>
@@ -228,6 +225,9 @@
                                 <include reference="a8z-AV-3Zx"/>
                                 <exclude reference="frS-eb-nsZ"/>
                                 <exclude reference="tih-Yc-g3W"/>
+                                <include reference="Avq-O2-Zb6"/>
+                                <exclude reference="KcK-vn-fXm"/>
+                                <include reference="eiO-Wp-xxf"/>
                                 <exclude reference="4No-nJ-Id6"/>
                                 <include reference="MZK-rj-q49"/>
                                 <exclude reference="ulH-6H-ink"/>
