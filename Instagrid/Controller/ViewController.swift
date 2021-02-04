@@ -36,7 +36,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomLeftView: UIButton!
     @IBOutlet weak var bottomRightView: UIButton!
     
-    // Share Display : Label & Arrow
+    // Main Title
     @IBOutlet weak var instagridLabel: UILabel!
     
     // Share Display : Label & Arrow
@@ -109,7 +109,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: Private Methods
     
-    // Radius correction to all views
+    // Radius correction from all views
     private func viewRadius() {
         topLeftView.layer.cornerRadius = 2
         topRightView.layer.cornerRadius = 2
@@ -117,7 +117,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomRightView.layer.cornerRadius = 2
     }
     
-    // Display Layout Selection and Apply to Grid
+    // Display Layout Selection and apply configuration to Grid
     private func currentLayout(_ layoutDisplay: Display) {
         switch layoutDisplay {
         case .layoutT:
@@ -150,6 +150,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Define Orientation of device
     @objc private func disposition() {
         if UIDevice.current.orientation == .landscapeRight || UIDevice.current.orientation == .landscapeLeft {
+            // Condition for small display iPhone SE Gen 1
             if (traitCollection.verticalSizeClass == .compact) && (traitCollection.horizontalSizeClass == .compact) {
                 swipeLabel.font = swipeLabel.font.withSize(22)
                 instagridLabel.font = instagridLabel.font.withSize(30)
