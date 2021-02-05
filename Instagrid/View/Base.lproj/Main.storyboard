@@ -64,7 +64,7 @@
                                 <variation key="heightClass=compact" axis="vertical" spacing="28"/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abb-tk-cHf">
-                                <rect key="frame" x="41" y="282" width="332" height="332"/>
+                                <rect key="frame" x="41" y="287" width="332" height="332"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cA0-wP-6m6" userLabel="Grid View">
                                         <rect key="frame" x="16" y="16" width="300" height="300"/>
@@ -127,7 +127,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="kEs-Ns-39d" userLabel="Swipe Views">
-                                <rect key="frame" x="117.66666666666667" y="221.66666666666666" width="178.66666666666663" height="50.333333333333343"/>
+                                <rect key="frame" x="117.66666666666667" y="226.66666666666666" width="178.66666666666663" height="50.333333333333343"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-nm-kTf">
                                         <rect key="frame" x="80.999999999999986" y="0.0" width="16.666666666666671" height="12"/>
@@ -162,10 +162,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ihC-cH-Dro" secondAttribute="trailing" constant="15" id="CWs-q8-e3t"/>
                             <constraint firstItem="abb-tk-cHf" firstAttribute="top" secondItem="kEs-Ns-39d" secondAttribute="bottom" constant="10" id="DMO-mG-lN8"/>
                             <constraint firstItem="ihC-cH-Dro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Dou-a1-a1X"/>
-                            <constraint firstItem="abb-tk-cHf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GBq-Y9-dZE"/>
+                            <constraint firstItem="abb-tk-cHf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="GBq-Y9-dZE"/>
                             <constraint firstItem="kEs-Ns-39d" firstAttribute="centerX" secondItem="abb-tk-cHf" secondAttribute="centerX" id="HBC-6V-VZt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="chB-DA-3Nb" secondAttribute="bottom" constant="30" id="Kar-Rg-ryT"/>
-                            <constraint firstItem="abb-tk-cHf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="Ke3-TN-m0D">
+                            <constraint firstItem="abb-tk-cHf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="10" id="Ke3-TN-m0D">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="chB-DA-3Nb" secondAttribute="bottom" constant="25" id="L4W-HZ-yvc">
@@ -180,8 +180,8 @@
                             <constraint firstItem="abb-tk-cHf" firstAttribute="top" secondItem="ihC-cH-Dro" secondAttribute="bottom" constant="10" id="fqO-5T-WfB"/>
                             <constraint firstItem="abb-tk-cHf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="frS-eb-nsZ"/>
                             <constraint firstAttribute="trailing" secondItem="chB-DA-3Nb" secondAttribute="trailing" constant="46" id="p13-D6-Gg9"/>
-                            <constraint firstItem="chB-DA-3Nb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ulH-6H-ink"/>
-                            <constraint firstItem="kEs-Ns-39d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wyl-1R-f09"/>
+                            <constraint firstItem="chB-DA-3Nb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ulH-6H-ink"/>
+                            <constraint firstItem="kEs-Ns-39d" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="10.666666666666686" id="wyl-1R-f09"/>
                             <constraint firstItem="ihC-cH-Dro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="yIb-Q0-Zax"/>
                         </constraints>
                         <variation key="default">

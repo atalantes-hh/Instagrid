@@ -13,32 +13,9 @@
 		1E39C844259B5AB30011E830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C842259B5AB30011E830 /* Main.storyboard */; };
 		1E39C846259B5AB40011E830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C845259B5AB40011E830 /* Assets.xcassets */; };
 		1E39C849259B5AB40011E830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C847259B5AB40011E830 /* LaunchScreen.storyboard */; };
-		1E39C854259B5AB40011E830 /* InstagridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E39C853259B5AB40011E830 /* InstagridTests.swift */; };
-		1E39C85F259B5AB40011E830 /* InstagridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E39C85E259B5AB40011E830 /* InstagridUITests.swift */; };
 		1E39C871259B5CB80011E830 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C870259B5CB80011E830 /* ThirstySoftRegular.otf */; };
-		1E39C872259B5CB80011E830 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C870259B5CB80011E830 /* ThirstySoftRegular.otf */; };
-		1E39C873259B5CB80011E830 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C870259B5CB80011E830 /* ThirstySoftRegular.otf */; };
 		1E39C87B259B5CC70011E830 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C87A259B5CC70011E830 /* Delm-Medium.otf */; };
-		1E39C87C259B5CC70011E830 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C87A259B5CC70011E830 /* Delm-Medium.otf */; };
-		1E39C87D259B5CC70011E830 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E39C87A259B5CC70011E830 /* Delm-Medium.otf */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1E39C850259B5AB40011E830 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E39C831259B5AB20011E830 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E39C838259B5AB30011E830;
-			remoteInfo = Instagrid;
-		};
-		1E39C85B259B5AB40011E830 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E39C831259B5AB20011E830 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E39C838259B5AB30011E830;
-			remoteInfo = Instagrid;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1E39C839259B5AB30011E830 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,32 +26,12 @@
 		1E39C845259B5AB40011E830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E39C848259B5AB40011E830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E39C84A259B5AB40011E830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E39C84F259B5AB40011E830 /* InstagridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E39C853259B5AB40011E830 /* InstagridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridTests.swift; sourceTree = "<group>"; };
-		1E39C855259B5AB40011E830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E39C85A259B5AB40011E830 /* InstagridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E39C85E259B5AB40011E830 /* InstagridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridUITests.swift; sourceTree = "<group>"; };
-		1E39C860259B5AB50011E830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E39C870259B5CB80011E830 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		1E39C87A259B5CC70011E830 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1E39C836259B5AB30011E830 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E39C84C259B5AB40011E830 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E39C857259B5AB40011E830 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,8 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				1E39C83B259B5AB30011E830 /* Instagrid */,
-				1E39C852259B5AB40011E830 /* InstagridTests */,
-				1E39C85D259B5AB40011E830 /* InstagridUITests */,
 				1E39C83A259B5AB30011E830 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,8 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				1E39C839259B5AB30011E830 /* Instagrid.app */,
-				1E39C84F259B5AB40011E830 /* InstagridTests.xctest */,
-				1E39C85A259B5AB40011E830 /* InstagridUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,24 +65,6 @@
 				1E6CA95925A76DBD00B0EC04 /* Controller */,
 			);
 			path = Instagrid;
-			sourceTree = "<group>";
-		};
-		1E39C852259B5AB40011E830 /* InstagridTests */ = {
-			isa = PBXGroup;
-			children = (
-				1E39C853259B5AB40011E830 /* InstagridTests.swift */,
-				1E39C855259B5AB40011E830 /* Info.plist */,
-			);
-			path = InstagridTests;
-			sourceTree = "<group>";
-		};
-		1E39C85D259B5AB40011E830 /* InstagridUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1E39C85E259B5AB40011E830 /* InstagridUITests.swift */,
-				1E39C860259B5AB50011E830 /* Info.plist */,
-			);
-			path = InstagridUITests;
 			sourceTree = "<group>";
 		};
 		1E39C86F259B5C960011E830 /* Supporting Files */ = {
@@ -183,42 +118,6 @@
 			productReference = 1E39C839259B5AB30011E830 /* Instagrid.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1E39C84E259B5AB40011E830 /* InstagridTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E39C866259B5AB50011E830 /* Build configuration list for PBXNativeTarget "InstagridTests" */;
-			buildPhases = (
-				1E39C84B259B5AB40011E830 /* Sources */,
-				1E39C84C259B5AB40011E830 /* Frameworks */,
-				1E39C84D259B5AB40011E830 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1E39C851259B5AB40011E830 /* PBXTargetDependency */,
-			);
-			name = InstagridTests;
-			productName = InstagridTests;
-			productReference = 1E39C84F259B5AB40011E830 /* InstagridTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1E39C859259B5AB40011E830 /* InstagridUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E39C869259B5AB50011E830 /* Build configuration list for PBXNativeTarget "InstagridUITests" */;
-			buildPhases = (
-				1E39C856259B5AB40011E830 /* Sources */,
-				1E39C857259B5AB40011E830 /* Frameworks */,
-				1E39C858259B5AB40011E830 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1E39C85C259B5AB40011E830 /* PBXTargetDependency */,
-			);
-			name = InstagridUITests;
-			productName = InstagridUITests;
-			productReference = 1E39C85A259B5AB40011E830 /* InstagridUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,14 +129,6 @@
 				TargetAttributes = {
 					1E39C838259B5AB30011E830 = {
 						CreatedOnToolsVersion = 12.3;
-					};
-					1E39C84E259B5AB40011E830 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 1E39C838259B5AB30011E830;
-					};
-					1E39C859259B5AB40011E830 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 1E39C838259B5AB30011E830;
 					};
 				};
 			};
@@ -255,8 +146,6 @@
 			projectRoot = "";
 			targets = (
 				1E39C838259B5AB30011E830 /* Instagrid */,
-				1E39C84E259B5AB40011E830 /* InstagridTests */,
-				1E39C859259B5AB40011E830 /* InstagridUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,24 +160,6 @@
 				1E39C846259B5AB40011E830 /* Assets.xcassets in Resources */,
 				1E39C871259B5CB80011E830 /* ThirstySoftRegular.otf in Resources */,
 				1E39C844259B5AB30011E830 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E39C84D259B5AB40011E830 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E39C87C259B5CC70011E830 /* Delm-Medium.otf in Resources */,
-				1E39C872259B5CB80011E830 /* ThirstySoftRegular.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E39C858259B5AB40011E830 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E39C87D259B5CC70011E830 /* Delm-Medium.otf in Resources */,
-				1E39C873259B5CB80011E830 /* ThirstySoftRegular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,36 +196,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E39C84B259B5AB40011E830 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E39C854259B5AB40011E830 /* InstagridTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E39C856259B5AB40011E830 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E39C85F259B5AB40011E830 /* InstagridUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1E39C851259B5AB40011E830 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E39C838259B5AB30011E830 /* Instagrid */;
-			targetProxy = 1E39C850259B5AB40011E830 /* PBXContainerItemProxy */;
-		};
-		1E39C85C259B5AB40011E830 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E39C838259B5AB30011E830 /* Instagrid */;
-			targetProxy = 1E39C85B259B5AB40011E830 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1E39C842259B5AB30011E830 /* Main.storyboard */ = {
@@ -538,86 +380,6 @@
 			};
 			name = Release;
 		};
-		1E39C867259B5AB50011E830 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = InstagridTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.atalantes-hh.InstagridTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instagrid.app/Instagrid";
-			};
-			name = Debug;
-		};
-		1E39C868259B5AB50011E830 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = InstagridTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.atalantes-hh.InstagridTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instagrid.app/Instagrid";
-			};
-			name = Release;
-		};
-		1E39C86A259B5AB50011E830 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = InstagridUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.atalantes-hh.InstagridUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Instagrid;
-			};
-			name = Debug;
-		};
-		1E39C86B259B5AB50011E830 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = InstagridUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.atalantes-hh.InstagridUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Instagrid;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -635,24 +397,6 @@
 			buildConfigurations = (
 				1E39C864259B5AB50011E830 /* Debug */,
 				1E39C865259B5AB50011E830 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1E39C866259B5AB50011E830 /* Build configuration list for PBXNativeTarget "InstagridTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E39C867259B5AB50011E830 /* Debug */,
-				1E39C868259B5AB50011E830 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1E39C869259B5AB50011E830 /* Build configuration list for PBXNativeTarget "InstagridUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E39C86A259B5AB50011E830 /* Debug */,
-				1E39C86B259B5AB50011E830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

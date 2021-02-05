@@ -20,35 +20,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     enum CurrentView {
         case topLeftView, topRightView, bottomLeftView, bottomRightView
     }
-    var isView: CurrentView = .bottomLeftView
+    private var isView: CurrentView = .bottomLeftView
     
     // MARK: - @IBOutlet
     
     //  Buttons for layout
-    @IBOutlet weak var layout1: UIButton!
-    @IBOutlet weak var layout2: UIButton!
-    @IBOutlet weak var layout3: UIButton!
+    @IBOutlet private weak var layout1: UIButton!
+    @IBOutlet private weak var layout2: UIButton!
+    @IBOutlet private weak var layout3: UIButton!
     
     // All views & Buttons for Grid and Subviews
-    @IBOutlet weak var gridPicture: UIView!
-    @IBOutlet weak var topLeftView: UIButton!
-    @IBOutlet weak var topRightView: UIButton!
-    @IBOutlet weak var bottomLeftView: UIButton!
-    @IBOutlet weak var bottomRightView: UIButton!
+    @IBOutlet private weak var gridPicture: UIView!
+    @IBOutlet private weak var topLeftView: UIButton!
+    @IBOutlet private weak var topRightView: UIButton!
+    @IBOutlet private weak var bottomLeftView: UIButton!
+    @IBOutlet private weak var bottomRightView: UIButton!
     
     // Main Title
-    @IBOutlet weak var instagridLabel: UILabel!
+    @IBOutlet private weak var instagridLabel: UILabel!
     
     // Share Display : Label & Arrow
-    @IBOutlet weak var swipeLabel: UILabel!
-    @IBOutlet weak var arrow: UIImageView!
+    @IBOutlet private weak var swipeLabel: UILabel!
+    @IBOutlet private weak var arrow: UIImageView!
     
     // MARK: - Private var
     
     private var swipeGesture: UISwipeGestureRecognizer!
     
     // Display Layout Default
-    var activeDisplay: Display = .layoutReverseT {
+    private var activeDisplay: Display = .layoutReverseT {
         didSet {
             currentLayout(activeDisplay)
         }
@@ -74,35 +74,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - @IBAction
     
     // @IBAction Buttons for selected Layout
-    @IBAction func selectedLayout1(_ sender: Any) {
+    @IBAction private func selectedLayout1(_ sender: Any) {
         activeDisplay = .layoutT
     }
     
-    @IBAction func selectedLayout2(_ sender: Any) {
+    @IBAction private func selectedLayout2(_ sender: Any) {
         activeDisplay = .layoutReverseT
     }
     
-    @IBAction func selectedLayout3(_ sender: Any) {
+    @IBAction private func selectedLayout3(_ sender: Any) {
         activeDisplay = .fourSquare
     }
     
     // @IBAction to Add pictures to each view
-    @IBAction func newPictureTopLeft() {
+    @IBAction private func newPictureTopLeft() {
         loadPicture()
         isView = .topLeftView
     }
     
-    @IBAction func newPictureTopRight() {
+    @IBAction private func newPictureTopRight() {
         loadPicture()
         isView = .topRightView
     }
     
-    @IBAction func newPictureBottomLeft() {
+    @IBAction private func newPictureBottomLeft() {
         loadPicture()
         isView = .bottomLeftView
     }
     
-    @IBAction func newPictureBottomRight() {
+    @IBAction private func newPictureBottomRight() {
         loadPicture()
         isView = .bottomRightView
     }
