@@ -16,3 +16,6 @@ The application is available in portrait and landscape format on all iPhone size
 The application is not available on iPad.
 The code must be in Swift 4 or later.
 The application must be available from iOS 11.0
+
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-swift.svg)](https://forthebadge.com)
